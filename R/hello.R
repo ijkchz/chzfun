@@ -14,7 +14,19 @@
 #   Test Package:              'Ctrl + Shift + T'
 
 
-library("tidyverse")
-hello <- function() {
-  mtcars %>% head(10) %>% print()
+chz1 <- function() {
+  library(tidyverse)
+  library(pedquant)
+  library(plotly)
+  stock<-md_stock("002468.sz",from='2019-01-01',
+                  to=today(),
+                  source="163",
+                  adjust="dividend")
+  mydata<-stock[[1]]%>%as_tibble() %>%
+    mutate(date=ymd(date),xx=c(1:length(date)))
+  xdat<-mydata[seq(1,nrow(mydata),30),c('xx',"date")]
+  p1<-ggplot()+geom_line(data=mydata,aes(x=xx,y=close))+
+    theme_classic()
+  ggplotly(p1)
 }
+
