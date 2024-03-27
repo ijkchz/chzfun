@@ -13,4 +13,5 @@ Depends:
     tidyverse
 Imports: 
     pedquant,
-    plotly
+    plotly,
+    zoo

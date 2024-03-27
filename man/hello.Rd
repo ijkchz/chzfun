@@ -1,12 +1,12 @@
-\name{hello}
-\alias{hello}
-\title{Hello, World!}
+\name{gup_plot}
+\alias{gup_plot}
+\title{Hello,你奶奶!}
 \usage{
-hello()
+gup_plot()
 }
 \description{
-Prints 'Hello, world!'.
+Prints '你奶奶'.
 }
 \examples{
-hello()
+gup_plot()
 }
