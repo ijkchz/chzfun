@@ -14,11 +14,11 @@
 #   Test Package:              'Ctrl + Shift + T'
 
 
-chz1 <- function() {
+gup_plot <- function(id="002468.sz",day=30) {
   library(tidyverse)
   library(pedquant)
   library(plotly)
-  stock<-md_stock("002468.sz",from='2019-01-01',
+  stock<-md_stock(id,from=today()-day,
                   to=today(),
                   source="163",
                   adjust="dividend")

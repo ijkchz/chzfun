@@ -1,5 +1,5 @@
 #' rose
-#' Add your own function definitions on this file.
+#' 声势浩大说
 #' Log-Exponential density
 #'
 #' Compute the density or log-density for a Log-Exponential (LogExp)
@@ -9,7 +9,7 @@
 #' @param y vector of rates
 #' @param text wenben
 
-Rose_plot <- function(text="plot by xxx") {
+rose_plot <- function(text="plot by xxx") {
   library(tidyverse)
   library(plotly)
   x<- seq(0, 24) /24
